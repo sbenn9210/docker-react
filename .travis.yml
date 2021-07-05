@@ -7,7 +7,7 @@ services:
 
 # before install is going to be a series of commands before our tests are ran
 before_install:
-  - docker build -t sbenn9210/docker-react -f Dockerfile.dev ./frontend
+  - docker build -t sbenn9210/docker-react -f Dockerfile.dev .
 
 # The script section contains all the different commands that need to be executed
 # to run the test suite
