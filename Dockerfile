@@ -5,7 +5,7 @@ FROM node:alpine
 WORKDIR '/app'
 
 # Copy over my package.json
-COPY package.json .
+COPY package*.json ./
 
 # Run npm install
 
