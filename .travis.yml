@@ -1,5 +1,6 @@
 #give access to have super user level permissions
 sudo: required
+language: generic
 
 # Tell travis ci that we need docker preinstalled
 services:
