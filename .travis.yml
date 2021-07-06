@@ -13,3 +13,16 @@ before_install:
 # to run the test suite
 script:
   - docker run sbenn9210/docker-react npm run test -- --coverage
+
+#Add all the configuration to deploy to aws
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-565551666976"
+  bucket_path: "docker-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
